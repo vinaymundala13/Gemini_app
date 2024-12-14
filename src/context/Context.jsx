@@ -1,5 +1,5 @@
 import { createContext, useState } from "react";
-import run from "../config/gemini";
+import run from "../config/Gemini";
 
 export const Context = createContext();
 import {
@@ -60,6 +60,7 @@ const ContextProvider =(props)=>{
                 generationConfig,
                 history: [],
               });
+              
               let responseArray = response.split("**");
               let newResponse="";
               for(let i=0;i<responseArray.length;i++){
